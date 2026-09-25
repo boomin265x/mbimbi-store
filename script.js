@@ -42,7 +42,8 @@ const addToCart = index => {
 
 const updateCart = () => {
 	localStorage.setItem("mbimbi-cart", JSON.stringify(cart));
-	document.querySelector("#cartCount").textContent = cart.length;
+	const cartCount = document.querySelector("#cartCount");
+	if (cartCount) cartCount.textContent = cart.length;
 	document.querySelector("#cartTotal").textContent = formatPrice(cart.reduce((total, product) => total + product.price, 0));
 	document.querySelector("#cartItems").innerHTML = cart.length
 		? cart.map(product => `<div class="cart-item"><img src="${product.image}" alt="" /><div><h3>${product.name}</h3><p>${formatPrice(product.price)}</p></div></div>`).join("")
@@ -101,7 +102,7 @@ document.querySelector("#searchInput").addEventListener("input", event => {
 	renderProducts(document.querySelector(".filter.active").dataset.filter);
 });
 
-document.querySelector("#cartButton").addEventListener("click", openCart);
+document.querySelector("#cartButton")?.addEventListener("click", openCart);
 document.querySelector("#cartButtonBottom").addEventListener("click", openCart);
 document.querySelector("#accountButton").addEventListener("click", openAccount);
 document.querySelector("#closeAccount").addEventListener("click", closeAccount);
