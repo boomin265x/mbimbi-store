@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Shop | MBIMBI's FASHION STORE</title>
+	<meta name="description" content="Thoughtful sleepwear made for deep sleeps and slow mornings." />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<div class="announcement">Complimentary shipping on orders over MWK 100,000</div>
+	<header>
+		<nav class="nav" aria-label="Main navigation">
+			<button class="icon-button mobile-menu" id="mobileMenuButton" type="button" aria-label="Open menu" aria-controls="mobileMenuPanel" aria-expanded="false">☰</button>
+			<div class="brand-group"><a class="brand" href="index.html">MBIMBI's FASHION STORE<span>.</span></a><form class="search-form" id="searchForm" role="search"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" aria-label="Search products" placeholder="Search sleepwear" /></form></div>
+			<div class="nav-links"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#journal">Journal</a></div>
+			<div class="nav-actions"><button class="icon-button" id="cartButton" aria-label="Open shopping bag">♧<span class="cart-count" id="cartCount">0</span></button></div>
+		</nav>
+		<div class="mobile-menu-panel" id="mobileMenuPanel">
+			<a href="#shop">Shop</a>
+			<a href="#story">Our story</a>
+			<a href="#journal">Journal</a>
+		</div>
+	</header>
+
+	<main id="shop">
+		<section class="collection">
+			<div class="section-heading"><div><div class="eyebrow">Made for winding down</div><h1>What are you in the mood for?</h1></div><p>Comfort, considered.</p></div>
+			<div class="filters" role="group" aria-label="Filter products"><button class="filter active" data-filter="all">All pieces</button><button class="filter" data-filter="sets">Sets</button><button class="filter" data-filter="robes">Robes</button><button class="filter" data-filter="separates">Separates</button></div>
+			<div class="product-grid" id="productGrid"></div>
+		</section>
+
+		<section class="story" id="story"><div class="story-image"></div><div class="story-copy"><div class="eyebrow">A softer way to be</div><h2>Good nights start with good things.</h2><p>We make the pieces you reach for at the end of a long day. Natural fabrics, relaxed shapes, and tiny details that make staying in feel like a plan.</p><a class="text-link" href="#journal">Read our story&nbsp; ↗</a></div></section>
+		<section class="newsletter" id="journal"><div class="eyebrow">A note from MBIMBI's FASHION STORE</div><h2>Stay in the know.</h2><p>New drops, care notes, and small ways to make home feel better.</p><form class="signup" id="signup"><input type="email" aria-label="Email address" placeholder="Your email address" required /><button type="submit">Join us</button></form></section>
+	</main>
+	<footer><div><a class="brand" href="index.html">MBIMBI's FASHION STORE<span>.</span></a><p>Sleepwear for slow mornings.</p></div><p>© 2026 MBIMBI's FASHION STORE &nbsp; · &nbsp; Made for staying in</p></footer>
+
+	<nav class="bottom-nav" aria-label="Quick navigation"><a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10Z"></path></svg>Home</a><button id="cartButtonBottom" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.5L21 8H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>Cart</button><button id="accountButton" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 21a7 7 0 0 1 14 0"></path></svg>My account</button></nav>
+
+	<div class="overlay" id="overlay"></div>
+	<aside class="cart-drawer account-drawer" id="accountPanel" aria-label="My account">
+		<div class="cart-header"><h2>My account</h2><button class="icon-button" id="closeAccount" aria-label="Close account panel">×</button></div>
+		<div class="empty-cart"><p>Sign in to view your orders, saved pieces, and account details.</p><button class="primary-button checkout" type="button">Sign in&nbsp; ↗</button></div>
+	</aside>
+	<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag">
+		<div class="cart-header"><h2>Your bag</h2><button class="icon-button" id="closeCart" aria-label="Close shopping bag">×</button></div>
+		<div class="cart-items" id="cartItems"><div class="empty-cart">Your bag is feeling light.<br />Add something soft to fill it up.</div></div>
+		<div class="cart-total"><div class="total-line"><span>Subtotal</span><span id="cartTotal">MWK 0</span></div><a class="primary-button checkout" id="checkoutButton" href="checkout.html">Continue to checkout&nbsp; ↗</a></div>
+	</aside>
+	<script src="script.js"></script>
+</body>
+</html>
